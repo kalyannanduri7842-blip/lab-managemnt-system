@@ -566,6 +566,31 @@
   ],
   "testRequests": [
     {
+      "id": "req-lab-2896",
+      "accessionNumber": "ACC-2026-0505",
+      "patientId": "usr-pat-01",
+      "patientName": "Eleanor Rigby",
+      "patientDob": "1984-06-18",
+      "patientGender": "Female",
+      "patientPhone": "+1 (555) 892-3301",
+      "doctorId": null,
+      "doctorName": "Direct Patient Self-Request",
+      "testId": "tst-cbc",
+      "testName": "Complete Blood Count (CBC with 5-Part Diff)",
+      "testCode": "HEM-CBC-01",
+      "priority": "NORMAL",
+      "collectionType": "LAB_VISIT",
+      "scheduledDate": "2026-09-03",
+      "scheduledTime": "09:00 AM",
+      "clinicalNotes": "Standard diagnostic workup.",
+      "status": "REQUESTED",
+      "sampleId": null,
+      "invoiceId": "inv-lab-2896",
+      "reportId": null,
+      "createdAt": "2026-09-03T05:47:42.896Z",
+      "updatedAt": "2026-09-03T05:47:42.896Z"
+    },
+    {
       "id": "req-lab-6167",
       "accessionNumber": "ACC-2026-0504",
       "patientId": "usr-pat-01",
@@ -1501,6 +1526,23 @@
   ],
   "invoices": [
     {
+      "id": "inv-lab-2896",
+      "invoiceNumber": "INV-2026-7815",
+      "requestId": "req-lab-2896",
+      "patientId": "usr-pat-01",
+      "patientName": "Eleanor Rigby",
+      "testName": "Complete Blood Count (CBC with 5-Part Diff)",
+      "testPrice": 35,
+      "collectionFee": 0,
+      "taxAmount": 2.8,
+      "discount": 0,
+      "totalAmount": 37.8,
+      "status": "PAID",
+      "paymentMethod": "TEST_CHECKOUT_PRESET",
+      "paidAt": "2026-09-03T05:47:42.896Z",
+      "transactionRef": "TXN-582590"
+    },
+    {
       "id": "inv-lab-6167",
       "invoiceNumber": "INV-2026-7814",
       "requestId": "req-lab-6167",
@@ -1826,6 +1868,33 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notif-1788414462898-xhgh",
+      "userId": "usr-tech-02",
+      "title": "New Request: ACC-2026-0505",
+      "message": "New test request for Complete Blood Count (CBC with 5-Part Diff) (Eleanor Rigby) requires phlebotomy specimen collection.",
+      "type": "NEW_TEST_REQUEST",
+      "isRead": false,
+      "createdAt": "2026-09-03T05:47:42.898Z"
+    },
+    {
+      "id": "notif-1788414462897-qf39",
+      "userId": "usr-tech-01",
+      "title": "New Request: ACC-2026-0505",
+      "message": "New test request for Complete Blood Count (CBC with 5-Part Diff) (Eleanor Rigby) requires phlebotomy specimen collection.",
+      "type": "NEW_TEST_REQUEST",
+      "isRead": false,
+      "createdAt": "2026-09-03T05:47:42.897Z"
+    },
+    {
+      "id": "notif-1788414462897-ro97",
+      "userId": "usr-pat-01",
+      "title": "Test Booked: Complete Blood Count (CBC with 5-Part Diff)",
+      "message": "Your request for Complete Blood Count (CBC with 5-Part Diff) (ACC-2026-0505) has been confirmed for 2026-09-03 at 09:00 AM.",
+      "type": "REQUEST_CREATED",
+      "isRead": false,
+      "createdAt": "2026-09-03T05:47:42.897Z"
+    },
     {
       "id": "notif-1788410639045-omik",
       "userId": "usr-pat-01",
@@ -2296,6 +2365,26 @@
     }
   ],
   "auditLogs": [
+    {
+      "id": "aud-1788414462899-wtep",
+      "timestamp": "2026-09-03T05:47:42.899Z",
+      "actor": "Eleanor Rigby",
+      "role": "PATIENT",
+      "action": "TEST_REQUESTED",
+      "entity": "TEST_REQUEST",
+      "entityId": "req-lab-2896",
+      "details": "Created accession ACC-2026-0505 for Complete Blood Count (CBC with 5-Part Diff) (Patient: Eleanor Rigby)."
+    },
+    {
+      "id": "aud-1788414456353-hshi",
+      "timestamp": "2026-09-03T05:47:36.353Z",
+      "actor": "Eleanor Rigby",
+      "role": "PATIENT",
+      "action": "USER_LOGIN",
+      "entity": "USER",
+      "entityId": "usr-pat-01",
+      "details": "Eleanor Rigby signed in to PATIENT workspace."
+    },
     {
       "id": "aud-1788410976353-2ly2",
       "timestamp": "2026-09-03T04:49:36.353Z",

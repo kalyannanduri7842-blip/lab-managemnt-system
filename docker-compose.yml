@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  labcare-app:
+    build: .
+    container_name: labcare-hospital-system
+    ports:
+      - "6005:6005"
+      - "5175:5175"
+    environment:
+      - PORT=6005
+      - NODE_ENV=production
+    restart: unless-stopped
