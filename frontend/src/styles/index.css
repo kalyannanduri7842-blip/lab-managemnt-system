@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Subtle, Gentle Background Logo Animations (Humanized & Calm) */
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+@keyframes subtlePulseGlow {
+  0%, 100% {
+    opacity: 0.12;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.22;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes heartbeatWave {
+  0% {
+    stroke-dashoffset: 600;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-subtle-float {
+  animation: subtleFloat 8s ease-in-out infinite;
+}
+
+.animate-subtle-pulse {
+  animation: subtlePulseGlow 6s ease-in-out infinite;
+}
+
+.animate-heartbeat-line {
+  stroke-dasharray: 600;
+  animation: heartbeatWave 4s linear infinite;
+}
+
+/* Calm Ambient Clinical Grid */
+.clinical-grid-bg {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(203, 213, 225, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(203, 213, 225, 0.25) 1px, transparent 1px);
+}
+
+/* Human-Crafted Subtle Card Elevate */
+.human-card {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.human-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -8px rgba(15, 23, 42, 0.08), 0 2px 4px -1px rgba(15, 23, 42, 0.03);
+}
+
+/* Professional Print Styles for Official Clinical PDF Reports */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .report-page {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+/* Custom Healthcare Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
