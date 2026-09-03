@@ -2,6 +2,8 @@
   "name": "labcare-backend",
   "version": "1.0.0",
   "description": "LABCARE Healthcare Laboratory Management System Backend API",
+  "private": true,
+  "license": "UNLICENSED",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

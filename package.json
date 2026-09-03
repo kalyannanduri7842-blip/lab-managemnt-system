@@ -2,6 +2,8 @@
   "name": "hospilaty-lab-management",
   "version": "1.0.0",
   "description": "Enterprise Hospital Laboratory Management System (LMS) & Pathology Diagnostic Platform",
+  "private": true,
+  "license": "UNLICENSED",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -27,7 +29,6 @@
     "diagnostic"
   ],
   "author": "Hospital LabCare Engineering Team",
-  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2"
